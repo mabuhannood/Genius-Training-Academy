@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".LessonsListActivity">
+
+    <TextView
+        android:id="@+id/tvLessonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lesson Title"
+        android:padding="8dp"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tvLessonLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lesson Length"
+        android:padding="8dp"
+        android:gravity="center" />
+
+
+
+    <TextView
+        android:id="@+id/tvLessonInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Lesson Info"/>
+
+    <Button
+        android:id="@+id/btnWatchLesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WATCH LESSON"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="5dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <WebView
+        android:id="@+id/wvVideoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take notes"
+        android:textSize="20sp"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <EditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Type your notes here"
+        android:gravity="top"
+        android:backgroundTint="#494949"
+        />
+
+
+    <TextView
+        android:id="@+id/tvNotesError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="error"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#F22716"
+        android:textSize="15sp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/btnSaveNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE NOTES"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="right"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="40dp"
+        />
+
+    <Button
+        android:id="@+id/btnMarkComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MARK COMPLETE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

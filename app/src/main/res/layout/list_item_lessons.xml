@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imgLesson"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:padding="8dp"
+        android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.7">
+        <TextView
+            android:id="@+id/tvLessonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intro to the course"
+            android:padding="8dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvLessonLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length: 12 min"
+
+            android:padding="8dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgLessonComplt"
+        android:layout_weight="0.3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher_background"
+
+        />
+
+
+</LinearLayout>
