@@ -7,14 +7,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.codecx.project_g11.databinding.ActivityLessonsListBinding
 import com.example.project_g08.Datasource
-import com.example.project_g08.Lesson
 
 class LessonsListActivity : AppCompatActivity() {
     lateinit var dataSource: Datasource
     lateinit var binding: ActivityLessonsListBinding
     lateinit var lessonsList: ArrayList<Lesson>
     lateinit var lessonsAdapter: LessonListAdapter
-    var isSequential: Boolean = false
+    var inSequence: Boolean = false
     var t: Toast? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +33,7 @@ class LessonsListActivity : AppCompatActivity() {
         binding.lvLessons.adapter = lessonsAdapter
 
         binding.swSequential.setOnClickListener {
-            isSequential = binding.swSequential.isChecked
+            inSequence = binding.swSequential.isChecked
 
         }
 
@@ -43,7 +42,7 @@ class LessonsListActivity : AppCompatActivity() {
 
             dataSource.selectedLessonPosition = position
 
-            if (!isSequential || position == 0) {
+            if (!inSequence || position == 0) {
                 val intent = Intent(this, LessonDetailActivity::class.java)
                 startActivity(intent)
 
@@ -55,7 +54,7 @@ class LessonsListActivity : AppCompatActivity() {
                     t?.cancel()
                     t = Toast.makeText(
                         this@LessonsListActivity,
-                        "Not allowed while in sequential mode",
+                        "Previous course is not completed",
                         Toast.LENGTH_SHORT
                     )
                     t?.show()

@@ -13,14 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lesson Title"
-        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center" />
     <TextView
         android:id="@+id/tvLessonLength"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lesson Length"
-        android:padding="8dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center" />
 
 
@@ -30,6 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="20dp"
         android:text="Lesson Info"/>
 
     <Button
@@ -56,7 +60,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take notes"
+        android:text="Take notes:"
         android:textSize="20sp"
         android:layout_gravity="left"
         android:layout_marginHorizontal="8dp"
@@ -70,9 +74,10 @@
         android:inputType="textMultiLine"
         android:layout_marginHorizontal="8dp"
         android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
         android:hint="Type your notes here"
         android:gravity="top"
-        android:backgroundTint="#494949"
+        android:background="@drawable/customborder"
         />
 
 
@@ -93,11 +98,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SAVE NOTES"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_gravity="right"
+        android:textColor="@color/purple_500"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         />
 
     <Button

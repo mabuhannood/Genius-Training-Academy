@@ -1,15 +1,14 @@
 package com.codecx.project_g11
 
+import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.codecx.project_g11.databinding.ActivityLessonDetailBinding
 import com.example.project_g08.Datasource
-import com.example.project_g08.Lesson
 
 class LessonDetailActivity : AppCompatActivity() {
     lateinit var datasource: Datasource
@@ -26,10 +25,11 @@ class LessonDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
+    @SuppressLint("SetTextI18n", "SetJavaScriptEnabled")
     override fun onStart() {
         super.onStart()
         datasource = Datasource.getInstance()
-//        sharedPrefs = this.getSharedPreferences(resources.getString(R.string.SHARED_PREFS_FILE_KEY), MODE_PRIVATE)
+        sharedPrefs = this.getSharedPreferences("KEY_PREFS_FILES", MODE_PRIVATE)
 
         val selectedLessonPosition = datasource.selectedLessonPosition
         if (selectedLessonPosition != null) {
@@ -45,6 +45,7 @@ class LessonDetailActivity : AppCompatActivity() {
             }
 
             binding.btnWatchLesson.setOnClickListener {
+                println("selected lesson : ${selectedLesson.videoURL}")
                 val webview = binding.wvVideoPlayer
                 webview.settings.javaScriptEnabled = true
                 webview.loadUrl(selectedLesson.videoURL)
@@ -85,6 +86,7 @@ class LessonDetailActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("MutatingSharedPrefs")
     private fun addCompletedClass(){
 
         var completedClasses:MutableSet<String>? = sharedPrefs.getStringSet("PREFS_COMPLETED_CLASSES", null)
